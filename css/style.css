@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+#header{
+	/*background: url("https://media.giphy.com/media/aRZ4vTsHnyW6A/giphy.gif") no-repeat;*/
+	background-size: cover;
+	background: black;
+	width:100%;
+	height: 100vh;
+	/*background: red;*/
+}
+
+.row{
+	padding: 0px;
+	margin: 0px;
+}
+.logo{
+	padding-top: 1%;
+}
+.logo img{
+	width: 7em;
+	height: 7em;
+	margin-left: 5%;
+	margin-top: 0%; 
+}
+
+/* ======================== My Intro section ========================== */
+
+#intro{
+	width: 100%;
+	height: 700px;
+	color: #fff;
+	padding-top:10%;
+	text-align: center;
+/*	background: blue;*/
+}
+
+#intro h1{
+	font: 3.3em Arial black, serif;
+}
+#intro h2{
+	font: 2.5em Arial black, serif;
+	margin-top: 20px;
+}
+#intro p{
+	font: 1.5em Arial, serif;
+	margin: 50px;
+}
+#my-img{
+	width:100%;
+	height: 700px;
+	/*background: yellow;*/
+}
+
+
+
+
+
+
+
+/* ====================== My Intro section ends ======================= */
+
+/* ======================== Go to next section button ====================== */
+
+.arrow{
+    position: absolute;
+    top: 90%;
+    left: 52.4%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.arrow span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    /*border-bottom: 5px solid #06A8FF;
+    border-right: 5px solid #06A8FF;*/
+    border-bottom: 3px solid red;
+    border-right: 3px solid red;
+    transform: rotate(45deg);
+    /*margin: -10px;*/
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+
+.arrow h1{
+	position:relative;
+	top: 30px;
+	left: -43px;
+	width:100%;
+	font-size: 20px;
+}
+
+.arrow:hover{
+	color: #fff;
+	transition: 1s;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+
+
+/* ======================== goto next section button ends =======================*/
+
+
+
+/* ============================= The Overlay (background) =============================== */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  /*background-color: rgb(255,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.8); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay-content a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover, .overlay a:focus {
+ 	 
+}
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color:#fff;
+  text-decoration: none;
+}
+
+/* =============================== overlay ends =============================== */
+
+
+/* =============================== Toggler button ============================= */
+
+#toggler{
+	float: right;
+	margin-top: 45px;
+	margin-right: 45px;
+	width: 60px;
+	height: 60px;
+	padding-top: 10px;
+	padding-left: 14px;
+	border-radius: 10px;
+	cursor: pointer; 
+
+}
+#toggler:hover{
+	background: rgba(255, 0, 0, 0.8);
+    transition: background 1000ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    border-radius: 50%;
+    transform: rotateZ(180deg);
+    transition: 1s;
+}
+#toggler div {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0px;
+  opacity: 1;
+}
+#toggler div.bar2{
+	width:20px;
+}
+
+/* ============================== toggeler button end ========================= */
+
+
+/* ============================== responsive code of header ============================= */
+
+
+@media (min-width: 1192px) and screen{
+	.logo{
+		padding-top: 1%;
+	}
+	.logo img{
+		width: 7em;
+		height: 7em;
+	}
+
+
+
+	#intro h1{
+		font: 3.3em Arial black, serif;
+	}
+	#intro h2{
+		font: 2.5em Arial black, serif;
+		margin-top: 20px;
+	}
+	#intro p{
+		font: 1.5em Arial, serif;
+	}
+
+}
+
+@media (min-width: 992px) and (max-width: 1191px){
+	.logo{
+		padding-top: 1.5%;
+	}
+	.logo img{
+		width:6em;
+		height: 6em;
+	}
+
+	#intro h1{
+		font: 2.5em Arial black, serif;
+	}
+	#intro h2{
+		font: 2em Arial black, serif;
+		margin-top: 20px;
+	}
+	#intro p{
+		font: 1.5em Arial, serif;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	.logo{
+		padding-top: 1.7%;
+	}
+	.logo img{
+		width: 7em;
+		height: 7em;
+	}
+	#toggler{
+	transform: rotateZ(180deg);
+    }
+    #intro h1{
+		font: 2em Arial black, serif;
+	}
+	#intro h2{
+		font: 1.5em Arial black, serif;
+		margin-top: 20px;
+	}
+	#intro p{
+		font: 1em Arial, serif;
+	}	
+}
+
+@media (min-width: 451px) and (max-width: 767px){
+	.logo{
+		padding-top: 3%;
+	}
+	.logo img{
+		width: 6em;
+		height: 6em;
+	}
+	#toggler{
+	transform: rotateZ(180deg);
+    }
+    #intro h1{
+		font: 2em Arial black, serif;
+	}
+	#intro h2{
+		font: 1.5em Arial black, serif;
+		margin-top: 20px;
+	}
+	#intro p{
+		font: 1em Arial, serif;
+	}	
+}
+@media screen and (max-height: 450px) {
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  .logo{
+		padding-top: 3%;
+	}
+  .logo img{
+  	width: 5em;
+  	height: 5em;
+  }
+  #toggler{
+	transform: rotateZ(180deg);
+    }
+    #intro h1{
+		font: 2em Arial black, serif;
+	}
+	#intro h2{
+		font: 1.5em Arial black, serif;
+		margin-top: 20px;
+	}
+	#intro p{
+		font: 1.5em Arial, serif;
+	}
+}
+
+
+/* ============================== Responsive code of header ends ============================= */
+
+
+
+
+
+
+
